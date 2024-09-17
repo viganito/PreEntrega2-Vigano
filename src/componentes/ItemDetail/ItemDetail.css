@@ -1,0 +1,16 @@
+.contenedorItem{
+    text-align: center;
+    border: 1px solid black;
+    margin: 4rem;
+}
+
+img{
+    width: 35vw;
+}
+
+p{
+    color: rgb(65, 124, 134);
+    padding: 15px;
+    font-size: 1.2rem;
+    margin: 2rem;
+}

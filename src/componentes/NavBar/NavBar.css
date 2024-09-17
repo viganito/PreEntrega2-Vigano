@@ -1,0 +1,19 @@
+header{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    border-bottom: 6px solid rgb(91, 82, 172);
+}
+
+.logoAfterlife {
+    width: 250px;
+    margin: 0 5px;
+}
+
+li{
+    display: inline-flex;
+    margin: 0 30px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
