@@ -1,8 +1,18 @@
-# React + Vite
+## Afterlife:
+Lo que estan viendo a continuación es mi proyecto final del curso React JS. Se reflejan varios productos de eventos y ropas de la nueva modo de este sello representado a la escena electronica.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Herramientas y tecnologias que utilicé:
+-React
+-Firebase
+-Vite
+-React-Router-DOM
+-Toastify
+-Bootstrap
 
-Currently, two official plugins are available:
+## Funciones:
+-Agregué los productos del carrito de compras
+-Reflejar el avance del carrito de compras
+-Verás una lista de productos en el stock
+-Productos filtrados
+-Realizas varias ordenes de compras con los siguientes datos del comprador y los productos que seleccionarían
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

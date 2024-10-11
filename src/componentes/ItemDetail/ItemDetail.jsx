@@ -3,15 +3,24 @@ import "./ItemDetail.css"
 import Contador from '../Contador/Contador'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CarritoContext } from '../../context/CarritoContext'
+import { useContext } from 'react'
+import { toast } from 'react-toastify';
 
 
-const ItemDetail = ({id, nombre, precio, img, stock}) => {
+const ItemDetail = ({id, nombre, precio, img, stock, descripcion}) => {
 
   const [agregarCantidad, setAgregarCantidad] = useState(0)
 
+  const {agregarAlCarrito} = useContext(CarritoContext)
+
+
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    console.log("Productos agregador:" + cantidad)
+    
+    const item = {id, nombre, precio}
+    agregarAlCarrito (item, cantidad)
+    toast.success("La compra fue enviada correctamente",{autoClose:2000, theme: "colored", position: "top-right"})
   }
 
   return (
@@ -20,10 +29,9 @@ const ItemDetail = ({id, nombre, precio, img, stock}) => {
         <h3>Precio {precio} </h3>
         <h3>ID: {id}</h3>
         <img src={img} alt={nombre} />
-        <p>Ropa del sello 'Afterlife' con sus últimos diseños de la nueva moda. Que también te da el lugar de adquirir tus entradas a los mejores eventos de la música Electrónica que lo podes encontrar acá para poder disfrutar del sonido y una melodía tan increible como lo es</p>
-
+        <p>{descripcion}</p>
         {
-          agregarCantidad > 0 ? (<Link to="/cart"> Comprar </Link>) : (<Contador inicial={1} stock={stock} funcionAgregar={manejadorCantidad}/>)
+          agregarCantidad > 0 ? (<Link to="/cart"> Finalizar Compra</Link>) : (<Contador inicial={1} stock={stock} funcionAgregar={manejadorCantidad}/>)
         }
 
     </div>
